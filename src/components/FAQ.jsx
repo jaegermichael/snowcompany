@@ -16,13 +16,10 @@ function FAQItem({ question, answer }) {
 export default function FAQ() {
   const faqs = [
     { q: 'Which ice machine is right for my business?', a: 'Cafes and small restaurants typically need 60kg/day, hotels and bars 80&ndash;100kg, while larger operations may need 120kg or more. Contact us for a free assessment.' },
-    { q: 'How much ice can the machines produce?', a: 'Our commercial ice-making machines range from 60kg per 24 hours up to 120kg per 24 hours. Higher capacity options available on request.' },
     { q: 'Do you provide installation?', a: 'Yes. We provide professional installation nationwide, including site assessment, setup, testing, and operator training.' },
     { q: 'Are spare parts available?', a: 'Absolutely. We maintain stock of genuine spare parts for all machines we supply, ensuring quick turnaround on repairs.' },
-    { q: 'What warranty is included?', a: 'All equipment comes with manufacturer warranty covering parts and workmanship. Extended warranty options are also available.' },
     { q: 'Which ice cream machine should I choose?', a: 'Soft serve for high-volume walk-in traffic, hard ice cream batch freezers for scoop shops, countertop for restaurants, and gelato for premium specialty products.' },
     { q: 'Can you help me start an ice production business?', a: 'Yes! We assist with equipment selection, capacity planning, installation, training, and ongoing support so you can start producing and selling ice profitably.' },
-    { q: 'Do you offer maintenance services?', a: 'Yes. We offer preventative maintenance contracts, emergency repairs, spare parts supply, and technical support year-round.' },
   ];
 
   return (
