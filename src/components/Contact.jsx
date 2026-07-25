@@ -65,7 +65,7 @@ export default function Contact() {
                 <p className="text-sm">Sat: 8:00 AM &ndash; 1:00 PM</p>
               </div>
             </div>
-            <div className="h-48 bg-gray-200 rounded-b-xl overflow-hidden relative">
+            <div className="h-56 sm:h-48 bg-gray-200 rounded-b-xl overflow-hidden relative">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059!2d31.05!3d-17.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4e711101999%3A0x696e9f897f0b61d!2sHarare!5e0!3m2!1sen!2szw!4v1700000000000" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" title="Map"></iframe>
             </div>
           </div>

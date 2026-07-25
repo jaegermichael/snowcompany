@@ -22,9 +22,9 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-ice text-white px-6 py-4 rounded-xl shadow-xl flex items-center gap-3">
-              <span className="text-3xl font-black">24/7</span>
-              <span className="text-xs font-semibold leading-tight uppercase tracking-wide">Ice Production<br />Capacity Range</span>
+            <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-ice text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl shadow-xl flex items-center gap-3">
+              <span className="text-2xl sm:text-3xl font-black">24/7</span>
+              <span className="text-[10px] sm:text-xs font-semibold leading-tight uppercase tracking-wide">Ice Production<br />Capacity Range</span>
             </div>
           </div>
 

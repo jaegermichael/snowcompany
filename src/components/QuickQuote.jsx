@@ -7,8 +7,8 @@ export default function QuickQuote() {
   return (
     <section className="relative z-10 -mb-10">
       <div className="max-w-5xl mx-auto px-4 lg:px-8">
-        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 md:p-8">
-          <div className="flex flex-col md:flex-row md:items-end gap-4">
+        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-5 sm:p-6 md:p-8">
+          <div className="flex flex-col sm:flex-row sm:items-end gap-3 sm:gap-4">
             <div className="flex-1">
               <label className="block text-xs font-bold text-navy uppercase tracking-wider mb-2">Your Name</label>
               <input type="text" id="quickName" placeholder="Enter your name" className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm" />

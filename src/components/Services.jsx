@@ -33,9 +33,9 @@ export default function Services() {
             <div className="img-zoom rounded-xl overflow-hidden shadow-xl">
               <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=700&q=80" alt="" className="w-full h-96 object-cover" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-ice text-white p-6 rounded-xl shadow-xl">
-              <span className="text-4xl font-black block">100%</span>
-              <span className="text-xs font-semibold uppercase tracking-wide">Zimbabwe Coverage</span>
+            <div className="absolute -bottom-6 left-4 sm:left-6 lg:-left-6 bg-ice text-white p-5 sm:p-6 rounded-xl shadow-xl">
+              <span className="text-3xl sm:text-4xl font-black block">100%</span>
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide">Zimbabwe Coverage</span>
             </div>
           </div>
         </div>
