@@ -1,3 +1,4 @@
+import Logo from './Logo';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
@@ -47,15 +48,7 @@ export default function Header() {
       <header id="header" className={`sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100/50 ${isScrolled ? 'shadow-lg' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
-            <a href="#home" className="flex items-center gap-2.5 shrink-0">
-              <div className="w-10 h-10 bg-ice rounded-lg flex items-center justify-center shadow-sm">
-                <i className="fas fa-snowflake text-white text-lg"></i>
-              </div>
-              <div>
-                <span className="font-extrabold text-navy text-lg leading-none block tracking-tight">Frozen<span className="text-ice">Solutions</span></span>
-                <span className="text-[10px] text-gray-400 font-semibold tracking-[2px] uppercase">Zimbabwe</span>
-              </div>
-            </a>
+            <a href="#home" className="brand-home shrink-0" aria-label="Frozen Solutions home"><Logo /></a>
 
             <nav className="hidden lg:flex items-center gap-5">
               {navLinks.map((link) => (

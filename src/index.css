@@ -161,3 +161,8 @@ main > section .text-white\/50,footer .text-white\/40 { color:#c1d4e8; }
 @keyframes tag-drift { 0%,100% { transform:translateY(0); } 50% { transform:translateY(7px); } }
 @keyframes menu-enter { from { opacity:0; transform:translateY(-8px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 @media(max-width:767px) { .showcase-machine { height:310px; top:80px; width:72%; left:10%; } .hero-assurance { gap:10px; } }
+
+.brand-home { display:inline-flex; align-items:center; }
+.brand-logo { width:220px; height:auto; display:block; }
+footer .brand-logo { width:210px; }
+@media(max-width:767px) { .brand-logo { width:190px; } }

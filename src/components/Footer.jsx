@@ -1,13 +1,11 @@
+import Logo from './Logo';
 export default function Footer() {
   return (
     <footer className="bg-navy text-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-16 pb-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <a href="#home" className="flex items-center gap-2.5 mb-5">
-              <div className="w-10 h-10 bg-ice rounded-lg flex items-center justify-center"><i className="fas fa-snowflake text-white"></i></div>
-              <div><span className="font-extrabold text-white leading-none block">Frozen<span className="text-ice">Solutions</span></span><span className="text-[10px] text-white/40 font-semibold tracking-[2px] uppercase">Zimbabwe</span></div>
-            </a>
+            <a href="#home" className="brand-home mb-5" aria-label="Frozen Solutions home"><Logo inverse /></a>
             <p className="text-white/40 text-sm leading-relaxed mb-5">Zimbabwe's leading supplier of commercial ice-making and ice cream production equipment.</p>
             <div className="flex gap-2">
               <a href="#" className="w-9 h-9 bg-white/5 hover:bg-ice rounded-lg flex items-center justify-center transition"><i className="fab fa-facebook-f text-sm"></i></a>
