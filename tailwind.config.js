@@ -10,7 +10,7 @@ export default {
         ice: { DEFAULT: '#00AEEF', dark: '#0090C5', light: '#E0F7FF' },
         navy: { DEFAULT: '#0F172A', light: '#1E293B', muted: '#334155' },
       },
-      fontFamily: { sans: ['Inter', 'sans-serif'] },
+      fontFamily: { sans: ['Manrope', 'sans-serif'] },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'slide-up': 'slideUp 0.6s ease-out forwards',

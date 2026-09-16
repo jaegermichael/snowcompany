@@ -6,9 +6,7 @@ export default function CTABanner() {
         <div className="absolute inset-0 bg-navy/60"></div>
       </div>
       <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
-        <button onClick={() => alert('Video coming soon!')} className="w-20 h-20 bg-ice hover:bg-ice-dark rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-ice/30 transition group">
-          <i className="fas fa-play text-white text-2xl ml-1 group-hover:scale-110 transition"></i>
-        </button>
+        <span className="eyebrow text-ice block mb-6">Your next chapter starts here</span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
           Looking for the best<br />cold production equipment?
         </h2>

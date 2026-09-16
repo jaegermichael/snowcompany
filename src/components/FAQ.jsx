@@ -4,11 +4,11 @@ function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={`faq-item bg-white rounded-xl border border-gray-100 shadow-sm ${isOpen ? 'faq-open' : ''}`}>
-      <button onClick={() => setIsOpen(!isOpen)} className="w-full flex items-center justify-between p-5 text-left">
+      <button aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)} className="w-full flex items-center justify-between p-5 text-left">
         <span className="font-bold text-navy text-sm pr-4">{question}</span>
         <i className={`fas fa-chevron-down faq-chevron text-ice text-xs transition-transform ${isOpen ? 'rotate-180' : ''}`}></i>
       </button>
-      <div className="faq-body px-5"><p className="text-gray-500 text-sm pb-5" dangerouslySetInnerHTML={{ __html: answer }}></p></div>
+      <div hidden={!isOpen} className="faq-body px-5"><p className="text-gray-500 text-sm pb-5" dangerouslySetInnerHTML={{ __html: answer }}></p></div>
     </div>
   );
 }

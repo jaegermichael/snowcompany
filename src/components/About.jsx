@@ -24,14 +24,14 @@ export default function About() {
             </div>
             <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-ice text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl shadow-xl flex items-center gap-3">
               <span className="text-2xl sm:text-3xl font-black">24/7</span>
-              <span className="text-[10px] sm:text-xs font-semibold leading-tight uppercase tracking-wide">Ice Production<br />Capacity Range</span>
+              <span className="text-[10px] sm:text-xs font-semibold leading-tight uppercase tracking-wide">Ice Production<br />Local Support</span>
             </div>
           </div>
 
           <div>
             <span className="text-ice font-bold text-xs tracking-[3px] uppercase">About Frozen Solutions</span>
             <h2 className="text-3xl lg:text-4xl font-extrabold text-navy mt-3 mb-5 leading-tight">
-              We provide full range of cold production solutions
+              Your next chapter. Our local know-how.
             </h2>
             <p className="text-gray-500 leading-relaxed mb-6">
               Frozen Solutions supplies high-performance ice-making and ice cream production equipment designed for reliability, efficiency, and profitability. Whether you operate a restaurant, hotel, supermarket, cafe, or are starting a new venture &mdash; we keep your business running smoothly.

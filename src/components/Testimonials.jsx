@@ -10,7 +10,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-14">
           <span className="text-ice font-bold text-xs tracking-[3px] uppercase">Testimonials</span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-navy mt-3">Here is some clients feedbacks</h2>
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-navy mt-3">In good company.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (

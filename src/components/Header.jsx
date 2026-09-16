@@ -11,13 +11,13 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'HOME' },
-    { href: '#about', label: 'ABOUT' },
-    { href: '#services', label: 'SERVICES' },
-    { href: '#products', label: 'PRODUCTS' },
-    { href: '#industries', label: 'INDUSTRIES' },
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#services', label: 'Services' },
+    { href: '#products', label: 'Equipment' },
+    { href: '#industries', label: 'Industries' },
     { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'CONTACT' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
@@ -57,9 +57,9 @@ export default function Header() {
               </div>
             </a>
 
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-5">
               {navLinks.map((link) => (
-                <a key={link.href} href={link.href} className="text-sm font-semibold text-navy hover:text-ice transition">
+                <a key={link.href} href={link.href} className="text-xs font-semibold text-navy hover:text-ice transition">
                   {link.label}
                 </a>
               ))}
@@ -72,9 +72,9 @@ export default function Header() {
             </div>
 
             <button
-              onClick={() => setIsMobileMenuOpen(true)}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden w-10 h-10 flex items-center justify-center text-navy text-xl hover:bg-gray-100 rounded-lg transition"
-              aria-label="Open menu"
+              aria-label="Toggle menu" aria-expanded={isMobileMenuOpen} aria-controls="mobNav"
             >
               <i className="fas fa-bars"></i>
             </button>
@@ -82,11 +82,11 @@ export default function Header() {
         </div>
 
         {isMobileMenuOpen && (
-          <div id="mobNav" className="mob-nav open fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-50 lg:hidden">
+          <div id="mobNav" className="mob-nav open absolute top-full right-0 w-72 bg-white shadow-2xl z-50 lg:hidden">
             <div className="p-6">
               <div className="flex justify-between items-center mb-8">
                 <span className="font-bold text-navy text-lg">Menu</span>
-                <button onClick={() => setIsMobileMenuOpen(false)} className="text-navy text-2xl hover:text-ice transition">
+                <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu" className="text-navy text-2xl hover:text-ice transition">
                   <i className="fas fa-times"></i>
                 </button>
               </div>

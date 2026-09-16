@@ -72,13 +72,13 @@ export default function Contact() {
           <div className="lg:col-span-3">
             <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-xl border border-gray-100">
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                <div><label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Full Name *</label><input type="text" name="name" required placeholder="Your name" className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white" /></div>
-                <div><label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Phone / WhatsApp *</label><input type="tel" name="phone" required placeholder="+263 ..." className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white" /></div>
+                <div><label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Full Name *</label><input type="text" name="name" aria-label="Full name" required placeholder="Your name" className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white" /></div>
+                <div><label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Phone / WhatsApp *</label><input type="tel" name="phone" aria-label="Phone or WhatsApp" required placeholder="+263 ..." className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white" /></div>
               </div>
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                <div><label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Email</label><input type="email" name="email" placeholder="you@example.com" className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white" /></div>
+                <div><label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Email</label><input type="email" name="email" aria-label="Email" placeholder="you@example.com" className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white" /></div>
                 <div><label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Business Type</label>
-                  <select name="business" className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white">
+                  <select name="business" aria-label="Business type" className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white">
                     <option value="">Select type...</option>
                     <option>Restaurant</option><option>Hotel / Lodge</option><option>Cafe</option>
                     <option>Ice Cream Shop</option><option>Supermarket</option><option>Bar / Nightclub</option>
@@ -88,7 +88,7 @@ export default function Contact() {
               </div>
               <div className="mb-4">
                 <label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Product Interest *</label>
-                <select name="product" id="contactProduct" required className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white">
+                <select name="product" id="contactProduct" aria-label="Product interest" required className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white">
                   <option value="">Select product...</option>
                   <optgroup label="Ice Machines">
                     <option>60kg Ice Machine</option><option>80kg Ice Machine</option><option>100kg Ice Machine</option><option>120kg Ice Machine</option>
@@ -102,7 +102,7 @@ export default function Contact() {
               </div>
               <div className="mb-4">
                 <label className="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Message</label>
-                <textarea name="message" rows="4" placeholder="Tell us about your needs..." className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white resize-none"></textarea>
+                <textarea name="message" aria-label="Message" rows="4" placeholder="Tell us about your needs..." className="w-full border border-gray-200 px-4 py-3 rounded-lg text-sm bg-white resize-none"></textarea>
               </div>
               <label className="flex items-center gap-2 mb-6 cursor-pointer">
                 <input type="checkbox" name="financing" className="w-4 h-4 accent-ice" />

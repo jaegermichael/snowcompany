@@ -12,7 +12,7 @@ export default function IceCream({ onOpenQuote }) {
       title: 'Hard Ice Cream Production',
       desc: 'Batch freezers for premium hard scoop ice cream brands and dessert shops.',
       tags: ['Ice Cream Brands', 'Dessert Shops'],
-      icon: 'fa-cone-iced',
+      icon: 'fa-ice-cream',
       gradient: 'from-sky-50 to-ice-light',
     },
     {
@@ -27,7 +27,7 @@ export default function IceCream({ onOpenQuote }) {
       desc: 'Authentic gelato production for specialty shops and premium hotels.',
       tags: ['Gelato Shops', 'Hotels'],
       icon: 'fa-gem',
-      gradient: 'from-amber-50 to-orange-50',
+      gradient: 'from-sky-50 to-ice-light',
       premium: true,
     },
     {
@@ -55,7 +55,7 @@ export default function IceCream({ onOpenQuote }) {
                   <span className="absolute top-3 left-3 bg-ice text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Popular</span>
                 )}
                 {machine.premium && (
-                  <span className="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Premium</span>
+                  <span className="absolute top-3 left-3 bg-ice text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Premium</span>
                 )}
               </div>
               <div className="p-6">

@@ -1,39 +1,13 @@
 export default function Products() {
   const products = [
-    { title: 'Ice Making Machines', desc: '60kg &ndash; 120kg / 24hrs commercial ice production systems.', href: '#ice-machines', icon: 'fa-icicles', gradient: 'from-sky-50 to-ice-light' },
-    { title: 'Soft Serve Machines', desc: 'High-volume soft serve for shops, cafes, kiosks & events.', href: '#ice-cream', icon: 'fa-ice-cream', gradient: 'from-sky-50 to-ice-light' },
-    { title: 'Hard Ice Cream & Gelato', desc: 'Batch freezers and gelato machines for premium brands.', href: '#ice-cream', icon: 'fa-cone-iced', gradient: 'from-sky-50 to-ice-light' },
-    { title: 'Industrial Systems', desc: 'Heavy-duty systems for wholesale & food processing.', href: '#ice-machines', icon: 'fa-industry', gradient: 'from-sky-50 to-ice-light' },
+    { title: 'Ice production', desc: 'Commercial machines. From 60 to 120kg per day.', href: '#ice-machines', image: '/images/60 kgs per 24 hours.jpeg', type: 'machine' },
+    { title: 'Ice cream & gelato', desc: 'Soft serve, batch freezers, and gelato equipment.', href: '#ice-cream', image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1600&q=90', type: 'lifestyle' },
   ];
-
   return (
-    <section id="products" className="py-20 lg:py-28 bg-gray-50">
+    <section id="products" className="collection-section">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-ice font-bold text-xs tracking-[3px] uppercase">What We Supply</span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-navy mt-3">Specialist cold production equipment</h2>
-          <p className="text-gray-500 mt-3 max-w-2xl mx-auto">Premium machines built to withstand the demands of the Zimbabwean market.</p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, i) => (
-            <div key={i} className="card-hover bg-white rounded-xl shadow-md overflow-hidden">
-              <div className={`h-48 bg-gradient-to-br ${product.gradient} flex items-center justify-center`}>
-                <i className={`fas ${product.icon} text-ice text-5xl opacity-30`}></i>
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-navy text-base mb-1">{product.title}</h3>
-                <p className="text-gray-500 text-sm mb-4" dangerouslySetInnerHTML={{ __html: product.desc }}></p>
-                <a
-                  href={product.href}
-                  className="text-ice font-bold text-xs uppercase tracking-wide hover:underline inline-flex items-center gap-1"
-                >
-                  View Details <i className="fas fa-arrow-right text-[10px]"></i>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="collection-heading"><div><p className="eyebrow">The equipment collection</p><h2>Good business starts<br />with the right machine.</h2></div><p>From your first scoop to your busiest service, find equipment that works as hard as you do.</p></div>
+        <div className="collection-grid">{products.map((product, i) => <a className={`collection-item ${product.type}`} href={product.href} key={product.title}><div className="collection-image"><span className="collection-number">0{i + 1}</span><img src={product.image} alt={i === 0 ? 'Commercial ice production machine' : 'Ice cream served in bowls'} loading="lazy" /></div><div className="collection-caption"><div><h3>{product.title}</h3><p>{product.desc}</p></div><span aria-hidden="true">↗</span></div></a>)}</div>
       </div>
     </section>
   );
