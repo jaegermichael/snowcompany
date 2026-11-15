@@ -7,4 +7,6 @@
 - All forms now hand off to WhatsApp (prefilled message) or email; product "Quote" buttons preselect the contact form.
 - Font Awesome CDN removed (lucide-react icons instead).
 - Checked locally: build + typecheck, oxlint, `git diff --check`, desktop / 375px / 320px (no horizontal overflow), mobile menu (Escape, outside click, close on scroll), form `checkValidity()`, WhatsApp message output.
-- NOT done: push, Vercel deploy, live check.
+- Pushed `redesign/remake`, fast-forwarded `master` to 38545ef (user approved). Vercel production deploy succeeded.
+- Live check: www.snowcompany.co.zw, snowcompany.co.zw and snowcompany.vercel.app all serve the new bundle (index-B8U57bRA.js), no console errors, no broken images, no overflow at 375px, finder → quote prefill works.
+- Previous version recoverable at commit eb6a911.
