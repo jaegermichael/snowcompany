@@ -1,0 +1,57 @@
+/* Cinematic variant: ice-blue signal over a faint rule that reads on both dark and light sections. */
+.mikey-thread {
+  --mikey-signal: #00aeef;
+  --mikey-rule: rgba(127, 160, 185, 0.28);
+  --mikey-progress: 0;
+  --mikey-dot-y: 0px;
+  position: fixed;
+  top: 112px;
+  bottom: 36px;
+  left: 18px;
+  width: 2px;
+  z-index: 30;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+.mikey-thread__track,
+.mikey-thread__fill {
+  position: absolute;
+  inset: 0;
+}
+.mikey-thread__track {
+  width: 1px;
+  background: var(--mikey-rule);
+}
+.mikey-thread__fill {
+  background: var(--mikey-signal);
+  transform: scaleY(var(--mikey-progress));
+  transform-origin: top;
+}
+.mikey-thread__dot {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mikey-signal);
+  box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.18);
+  transform: translateY(calc(var(--mikey-dot-y) - 4px));
+}
+/* Only where a real gutter exists (shell max-width + padding leaves ≥ 32px) */
+@media (max-width: 759px) {
+  .mikey-thread {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mikey-thread__fill,
+  .mikey-thread__dot {
+    display: none;
+  }
+}
+@media (forced-colors: active) {
+  .mikey-thread {
+    display: none;
+  }
+}

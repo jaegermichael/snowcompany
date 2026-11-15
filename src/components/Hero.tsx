@@ -3,6 +3,7 @@ import { ArrowDownRight, MessageCircle, Truck, Wrench, PackageCheck } from 'luci
 import { iceMachines } from '../data/site';
 import { whatsappLink } from '../lib/whatsapp';
 import { useQuote } from '../lib/quote';
+import MikeyHeroLettering from './mikey/MikeyHeroLettering';
 
 // Deterministic "snow" so server/client and reloads match
 const specks = Array.from({ length: 22 }, (_, i) => ({
@@ -27,7 +28,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="top" className="grain relative isolate overflow-hidden bg-ink pb-16 pt-32 text-white sm:pt-36 lg:pb-24">
+    <section id="top" data-mikey-hero className="grain relative isolate overflow-hidden bg-ink pb-[24vw] pt-32 text-white sm:pt-36 md:pb-[19vw]">
       {/* cold glow */}
       <div aria-hidden className="absolute -right-40 -top-40 -z-10 h-[46rem] w-[46rem] rounded-full bg-ice/25 blur-[140px]" />
       <div aria-hidden className="absolute -bottom-60 -left-40 -z-10 h-[36rem] w-[36rem] rounded-full bg-[#2b5cff]/15 blur-[140px]" />
@@ -41,7 +42,13 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="shell grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
+      {/* Mikey glass lettering: decorative duplicate of the brand, behind the copy and stage */}
+      <MikeyHeroLettering
+        lines={['FROZEN']}
+        style={{ ['--mhl-size-first' as string]: '25vw', ['--mhl-mobile-first' as string]: '34vw' }}
+      />
+
+      <div className="shell relative z-[1] grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
         <div>
           <p className="eyebrow text-ice" data-reveal>
             Cold production · Local expertise
@@ -73,9 +80,6 @@ export default function Hero() {
         <div className="relative" data-reveal style={{ ['--d' as string]: '200ms' }}>
           <div className="glass rounded-[2rem] p-3 sm:p-4">
             <div className="relative overflow-hidden rounded-[1.5rem] bg-white">
-              <span aria-hidden className="pointer-events-none absolute left-5 top-3 select-none font-display text-[5rem] font-extrabold leading-none tracking-tighter text-ice/15 sm:text-[7rem]">
-                {m.capacity}
-              </span>
               <div key={m.capacity} id={`cap-panel`} role="tabpanel" aria-labelledby={`cap-tab-${active}`} className="stage-in relative grid aspect-[5/4] place-items-center p-6">
                 <img src={m.image} alt={`${m.capacity}kg per 24 hours commercial ice machine`} className="max-h-full w-auto max-w-[78%] object-contain mix-blend-multiply" />
               </div>

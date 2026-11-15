@@ -12,6 +12,7 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFab from './components/WhatsAppFab';
+import MikeyThread from './components/mikey/MikeyThread';
 
 export default function App() {
   useReveal();
@@ -19,6 +20,7 @@ export default function App() {
     <QuoteProvider>
       <a className="skip-link" href="#main">Skip to content</a>
       <Header />
+      <MikeyThread />
       <main id="main">
         <Hero />
         <IndustryBand />

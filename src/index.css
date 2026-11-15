@@ -5,7 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 6.5rem;
     -webkit-text-size-adjust: 100%;
   }
   body {
@@ -238,5 +238,103 @@
   }
   .speck {
     display: none;
+  }
+}
+
+/* Process rail (scroll-linked) */
+.process-rail {
+  --rail-x: 1.75rem;
+  --rail-start: 1.75rem;
+  --rail-length: 0px;
+  --rail-p: 0;
+}
+@media (min-width: 640px) {
+  .process-rail {
+    --rail-x: 2.25rem;
+  }
+}
+.process-rail__track,
+.process-rail__fill {
+  position: absolute;
+  left: var(--rail-x);
+  top: var(--rail-start);
+  height: var(--rail-length);
+  width: 1px;
+  background: rgba(7, 16, 30, 0.14);
+}
+.process-rail__fill {
+  width: 2px;
+  margin-left: -0.5px;
+  background: #00aeef;
+  transform: scaleY(var(--rail-p));
+  transform-origin: top;
+}
+.process-rail__dot {
+  position: absolute;
+  left: calc(var(--rail-x) - 5px);
+  top: calc(var(--rail-start) - 5px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00aeef;
+  box-shadow: 0 0 0 5px rgba(0, 174, 239, 0.2);
+  transform: translateY(calc(var(--rail-length) * var(--rail-p)));
+  z-index: 2;
+}
+.process-rail__node {
+  position: relative;
+  z-index: 1;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+.process-rail__step[data-active] .process-rail__node {
+  background: #07101e;
+  border-color: #00aeef;
+  color: #00aeef;
+  transform: scale(1.04);
+}
+@media (prefers-reduced-motion: reduce) {
+  .process-rail__fill,
+  .process-rail__dot {
+    display: none;
+  }
+}
+
+/* Mikey Island tokens: ink glass with the brand's ice-blue accent */
+header.mikey-island {
+  --mi-bg: rgba(7, 16, 30, 0.88);
+  --mi-muted: #9fb3c4;
+  --mi-accent: #00aeef;
+  --mi-accent-ink: #07101e;
+  z-index: 50;
+}
+header.mikey-island .mi-brand img {
+  height: 30px;
+}
+header.mikey-island .mi-contact {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Hero glass lettering sits as a cropped band along the hero's lower edge,
+   clear of the capacity stage and the headline. */
+#top .mikey-hero-lettering {
+  top: auto;
+  bottom: -5.2vw;
+  left: 2.5vw;
+  right: auto;
+  transform: none;
+  align-items: flex-start;
+  --mhl-fill: rgba(214, 241, 251, 0.04);
+  --mhl-stroke: rgba(214, 241, 251, 0.26);
+}
+@media (max-width: 600px) {
+  #top .mikey-hero-lettering {
+    bottom: -7vw;
+    left: 3vw;
+    --mhl-stroke: rgba(214, 241, 251, 0.2);
   }
 }

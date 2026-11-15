@@ -1,5 +1,6 @@
 import { Award, Leaf, Wrench, Truck, Settings2, ShieldCheck, Package, BadgeDollarSign } from 'lucide-react';
-import { services, steps } from '../data/site';
+import { services } from '../data/site';
+import ProcessRail from './ProcessRail';
 import { trackPointer } from '../lib/pointer';
 
 const icons = [Award, Leaf, Wrench, Truck, Settings2, ShieldCheck, Package, BadgeDollarSign];
@@ -42,15 +43,7 @@ export default function Support() {
         <div className="mt-24">
           <p className="eyebrow text-ice-deep" data-reveal>Simple process</p>
           <h3 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl" data-reveal>3 easy steps to equip your business</h3>
-          <ol className="mt-10 grid gap-5 md:grid-cols-3">
-            {steps.map((s, i) => (
-              <li key={s.title} className="relative rounded-[1.75rem] bg-ink p-8 text-white" data-reveal style={{ ['--d' as string]: `${i * 100}ms` }}>
-                <span className="font-display text-6xl font-extrabold leading-none text-ice">0{i + 1}</span>
-                <h4 className="mt-8 font-display text-2xl font-bold">{s.title}</h4>
-                <p className="mt-3 leading-relaxed text-white/60">{s.text}</p>
-              </li>
-            ))}
-          </ol>
+          <ProcessRail />
         </div>
       </div>
     </section>

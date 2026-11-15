@@ -1,0 +1,6 @@
+/* Parent hero: position:relative; isolation:isolate; overflow:hidden.
+   Photo/overlay: z-index:-2/-1. Readable copy/actions: position:relative; z-index:1. */
+.mikey-hero-lettering{--mhl-fill:rgba(255,255,255,.035);--mhl-stroke:rgba(255,255,255,.25);position:absolute;right:2.5vw;top:50%;transform:translateY(-50%);z-index:0;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none;user-select:none;font-family:inherit;font-weight:800;line-height:.88;letter-spacing:-.065em;color:var(--mhl-fill);-webkit-text-stroke:1px var(--mhl-stroke)}
+.mikey-hero-lettering>span:first-child{font-size:var(--mhl-size-first,24vw)}.mikey-hero-lettering>span:not(:first-child){font-size:var(--mhl-size-rest,11.7vw);letter-spacing:-.075em}
+@media(max-width:600px){.mikey-hero-lettering{top:49%;right:-5vw;gap:18px;--mhl-fill:rgba(255,255,255,.025);--mhl-stroke:rgba(255,255,255,.19)}.mikey-hero-lettering>span:first-child{font-size:var(--mhl-mobile-first,48vw)}.mikey-hero-lettering>span:not(:first-child){font-size:var(--mhl-mobile-rest,16vw)}}
+@media(forced-colors:active){.mikey-hero-lettering{display:none}}
