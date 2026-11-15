@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc"
   },
   "dependencies": {
+    "lucide-react": "^1.73.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
@@ -21,6 +23,7 @@
     "oxlint": "^1.71.0",
     "postcss": "^8.5.23",
     "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
     "vite": "^8.1.1"
   }
 }

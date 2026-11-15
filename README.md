@@ -1,16 +1,16 @@
-# React + Vite
+# Frozen Solutions Zimbabwe — snowcompany.co.zw
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Marketing site for Frozen Solutions (commercial ice machines and ice cream equipment, Harare).
 
-Currently, two official plugins are available:
+- Stack: React 19, TypeScript, Vite, Tailwind CSS 3, lucide-react.
+- Content: `src/data/site.ts` (single source for contact details, products, FAQ).
+- Enquiries: forms open WhatsApp (+263 77 614 6858) or email with a prefilled message. There is no backend and nothing is stored.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev      # local dev
+npm run build    # typecheck + production build
+npm run lint
+```
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+See `docs/` for progress, decisions and open questions.
